@@ -33,14 +33,41 @@ app.get('/', (req, res) => {
 const startApolloServer = async () => {
   await server.start();
   server.applyMiddleware({ app });
+
+  db.on("error", console.error.bind(console, "connection error:"));
+
   
   db.once('open', () => {
+    console.log("We are connected to the database!");
+    checkConnectionState();
+
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     })
   })
   };
+
+  function checkConnectionState() {
+    switch (db.readyState) {
+      case 0:
+        console.log("Mongoose connection state: disconnected");
+        break;
+      case 1:
+        console.log("Mongoose connection state: connected");
+        break;
+      case 2:
+        console.log("Mongoose connection state: connecting");
+        break;
+      case 3:
+        console.log("Mongoose connection state: disconnecting");
+        break;
+      default:
+        console.log("Mongoose connection state: unknown");
+        break;
+    }
+  }
+
   
 // Call the async function to start the server
   startApolloServer();

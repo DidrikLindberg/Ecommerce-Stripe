@@ -1,5 +1,8 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
+const dotenv = require('dotenv');
+dotenv.config();
+
 
 db.once('open', async () => {
   await Category.deleteMany();
@@ -108,4 +111,5 @@ db.once('open', async () => {
   console.log('users seeded');
 
   process.exit();
+  
 });
