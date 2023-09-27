@@ -8,6 +8,8 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+
+
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Detail from './pages/Detail';
@@ -18,6 +20,9 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Kanit&family=Poppins&family=Raleway:wght@900&display=swap" rel="stylesheet"></link>
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',

@@ -28,6 +28,63 @@ body {
   color: var(--dark);
 }
 
+.elegant-font {
+  font-family: 'Crimson Text', serif; /* Use the desired font name */
+  /* Additional font styles can be applied here */
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.gradient-card {
+  background: linear-gradient(to right, #dddddd, #ffffff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.text-card {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
+
+.text-card h2 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.text-card p {
+  font-size: 18px;
+}
+
+.shop-link {
+  font-size: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Adjust background size and position for smaller screens */
+@media (max-width: 768px) {
+  .gradient-card {
+    background-size: cover; /* Maintain aspect ratio */
+    background-position: center; /* Center the background image */
+  }
+
+  .text-card {
+    flex: 0;
+  }
+}
+
+
 h1,
 h2,
 h3,
@@ -95,11 +152,20 @@ header a {
   width: 84.5%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the container horizontally */
   padding: 10px; /* Add padding as needed */
+  margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
    position: sticky;
   top: 0;
    z-index: 100;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    width: 100%;
+  }
+}
+
+
 
 
 button {

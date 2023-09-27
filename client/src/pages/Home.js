@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CategoryMenu from '../components/CategoryMenu';
 import RandomProductList from '../components/RandomProductList'; // Import the new component
 import homeimage from '../assets/Smart-home.jpg';
 import Cart from '../components/Cart';
@@ -15,7 +14,7 @@ const Home = () => {
       
         <div className="gradient-card">
           <div className="text-card">
-            <h2>Welcome to Our Store</h2>
+            <h2 className='elegant-font'>Welcome to GreenTech Solutions</h2>
             <p>Discover a wide range of sustainable smart home products.</p>
             <Link to="/shop" className="shop-link">
               Shop All Products
