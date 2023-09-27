@@ -39,6 +39,16 @@ export const QUERY_ALL_PRODUCTS = gql`
   }
 `;
 
+export const GET_RANDOM_PRODUCTS = gql`
+  query GetRandomProducts($limit: Int!) {
+    randomProducts(limit: $limit) {
+      _id
+      name
+      image
+    }
+  }
+`;
+
 export const QUERY_CATEGORIES = gql`
   {
     categories {

@@ -24,16 +24,18 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <div className="mx-1">
             <Link to="/signup">
               Signup
             </Link>
-          </li>
-          <li className="mx-1">
+          </div>
+          
+          <div className="mx-1">
             <Link to="/login">
               Login
             </Link>
-          </li>
+          </div>
+          
         </ul>
       );
     }
@@ -44,7 +46,7 @@ function Nav() {
       <h1>
         <Link to="/">
           <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+          Smart & Sustainable
         </Link>
       </h1>
 

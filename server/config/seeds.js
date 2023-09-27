@@ -28,7 +28,7 @@ db.once('open', async () => {
         name: 'Smart LED Bulb',
         description:
           'Energy-efficient LED bulb with remote control and color-changing capabilities.',
-        image:'Smart LED Bulb.jpg',
+        image: s3BaseUrl + 'Smart LED Bulb.jpg',
         category: categories[0]._id,
         price: 19.99,
         quantity: 200,
@@ -37,7 +37,7 @@ db.once('open', async () => {
         name: 'Smart Thermostat',
         description:
           'Programmable thermostat that helps you save energy by optimizing heating and cooling.',
-        image: 'smart-thermostat.jpg',
+        image: s3BaseUrl + 'smart-thermostat.jpg',
         category: categories[1]._id,
         price: 149.99,
         quantity: 100,
@@ -46,7 +46,7 @@ db.once('open', async () => {
         name: 'Smart Doorbell',
         description:
           'Video doorbell with motion detection and smartphone integration for enhanced security.',
-        image: 'smart-doorbell.jpg',
+        image: s3BaseUrl + 'smart-doorbell.jpg',
         category: categories[2]._id,
         price: 199.99,
         quantity: 50,
@@ -55,7 +55,7 @@ db.once('open', async () => {
         name: 'Environmental Monitoring System',
         description:
           'A set of sensors that track indoor air quality, temperature, and humidity for a healthier home.',
-        image: 'environmental-monitor.jpg',
+        image: s3BaseUrl + 'environmental-monitor.jpg',
         category: categories[3]._id,
         price: 89.99,
         quantity: 75,
@@ -64,7 +64,7 @@ db.once('open', async () => {
         name: 'Smart Power Strip',
         description:
           'Energy-efficient power strip with individual outlets and remote control.',
-        image: 'smart-power-strip.jpg',
+        image: s3BaseUrl + 'smart-power-strip.jpg',
         category: categories[1]._id,
         price: 29.99,
         quantity: 150,
@@ -73,7 +73,7 @@ db.once('open', async () => {
         name: 'Smart Lock',
         description:
           'Keyless entry system with smartphone access for improved home security.',
-        image: 'smart-lock.jpg',
+        image: s3BaseUrl + 'smart-lock.jpg',
         category: categories[2]._id,
         price: 249.99,
         quantity: 40,
@@ -82,7 +82,7 @@ db.once('open', async () => {
         name: 'Solar-Powered Smart Blinds',
         description:
           'Automated blinds that adjust to natural light and can be controlled remotely.',
-        image: 'smart-blinds.jpg',
+        image: s3BaseUrl + 'smart-blinds.jpg',
         category: categories[0]._id,
         price: 149.99,
         quantity: 60,
