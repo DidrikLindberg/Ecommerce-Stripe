@@ -11,7 +11,7 @@ import { idbPromise } from '../../utils/helpers';
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
-  const { categories } = state;
+  const { categories, currentCategory } = state;
 
   const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
@@ -34,22 +34,42 @@ function CategoryMenu() {
     }
   }, [categoryData, loading, dispatch]);
 
-  const handleClick = (id) => {
+  const handleCategoryClick = (id) => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,
       currentCategory: id,
     });
   };
 
+  const handleShowAllClick = () => {
+    // Set the current category to null to show all products
+    dispatch({
+      type: UPDATE_CURRENT_CATEGORY,
+      currentCategory: null,
+    });
+  };
+
   return (
     <div>
-      <h2>Choose a Category:</h2>
+      <h2>Categories</h2>
+      <button
+        key="showAll"
+        onClick={() => {
+          handleShowAllClick();
+        }}
+        // Add a CSS class to style the "Show All" button
+        className={`btn ${currentCategory === null ? 'btn-primary' : 'btn-light'}`}
+      >
+        Show All
+      </button>
       {categories.map((item) => (
         <button
           key={item._id}
           onClick={() => {
-            handleClick(item._id);
+            handleCategoryClick(item._id);
           }}
+          // Highlight the selected category button
+          className={`btn ${currentCategory === item._id ? 'btn-primary' : 'btn-light'}`}
         >
           {item.name}
         </button>

@@ -5,9 +5,15 @@ import Cart from "../components/Cart";
 
 const Shop = () => {
   return (
-    <div className="container">
-      <CategoryMenu />
-      <ProductList />
+    <div className="container ">
+      <div className="row">
+        <div className="col-md-3 "> {/* Category menu column */}
+          <CategoryMenu />
+        </div>
+        <div className="col-md-9"> {/* Product list column */}
+          <ProductList />
+        </div>
+      </div>
       <Cart />
     </div>
   );
