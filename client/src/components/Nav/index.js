@@ -42,11 +42,12 @@ function Nav() {
   }
 
   return (
+    <div className="navbar-container">
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
           <span role="img" aria-label="shopping bag">🛍️</span>
-          Smart & Sustainable
+          Modern Smart Home
         </Link>
       </h1>
 
@@ -54,6 +55,7 @@ function Nav() {
         {showNavigation()}
       </nav>
     </header>
+    </div>
   );
 }
 
