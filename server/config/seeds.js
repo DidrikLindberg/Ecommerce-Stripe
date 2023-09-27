@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 
+
+
 db.once('open', async () => {
   await Category.deleteMany();
 
@@ -18,13 +20,15 @@ db.once('open', async () => {
   console.log('categories seeded');
 
   await Product.deleteMany();
+  const s3BaseUrl = 'https://smartproducts.s3.us-west-1.amazonaws.com/';
+
 
   const products = await Product.insertMany([
     {
         name: 'Smart LED Bulb',
         description:
           'Energy-efficient LED bulb with remote control and color-changing capabilities.',
-        image: 'smart-led-bulb.jpg',
+        image:'Smart LED Bulb.jpg',
         category: categories[0]._id,
         price: 19.99,
         quantity: 200,
